@@ -9,6 +9,19 @@ body{
     text-align: center; 
 }
 
+a{
+    color:white;
+    text-decoration: none;
+}
+a:visited{
+    color:white;
+    text-decoration: none;
+}
+a:hover{
+    color:grey;
+    text-decoration: none;
+}
+
 .logo-wrapper{
     display: inline-block; 
      
@@ -21,9 +34,21 @@ body{
 
 }
 
+h1{
+    margin-bottom: 0; 
+}
 .header-wrapper{
 
 }
+
+.promotion-wrapper{
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    text-align: left;
+    margin-bottom: 10%; 
+}
+
 
 .text-wrapper{
     display: inline-block;
