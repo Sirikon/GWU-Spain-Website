@@ -47,6 +47,11 @@ body {
 .gwu-content ul {
     margin-left: 1.5em;
 }
+@media (max-width: 350px) {
+    .gwu-content ul.fa-ul {
+        margin-left: .5em;
+    }
+}
 
 .gwu-content ul.fa-ul li {
     margin: .5em 0;
