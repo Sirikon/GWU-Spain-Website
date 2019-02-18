@@ -1,0 +1,18 @@
+baseURL = "https://gwuspain.org/"
+languageCode = "es-es"
+title = "GWU España"
+theme = "gwuspain"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[outputs]
+  home     = ["HTML"]
+  section  = ["HTML", "RSS"]
+
+[params]
+    description = "División española de la organización Game Workers Unite."
+
+    inscriptionUrl = "https://goo.gl/forms/C8Ji3rrsvloYXiIx2"
+    contactEmail = "contact@gwuspain.org"
+    twitterSpain = "GWU_Spain"
+    twitterInternational = "GameWorkers"
