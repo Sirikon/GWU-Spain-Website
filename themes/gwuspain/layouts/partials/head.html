@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="{{ $.Site.Params.description }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta name="og:title" content="{{ .Title }}">
+<meta name="og:description" content="{{ .Description }}">
+<meta property="og:image" content="{{ $.Site.BaseURL }}images/card.png" />
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ $.Site.Params.twitterSpain }}">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description }}">
+<meta name="twitter:image" content="{{ $.Site.BaseURL }}images/card.png" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.png">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+{{ $style := resources.Get "style/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+
+<title>{{ .Title }}</title>
