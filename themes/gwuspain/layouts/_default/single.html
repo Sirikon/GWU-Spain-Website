@@ -1,0 +1,9 @@
+{{ define "header" }}
+{{- partial "header.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+    <article class="gwu-content">
+        {{ .Content }}
+    </article>
+{{ end }}
