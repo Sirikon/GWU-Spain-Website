@@ -1,0 +1,15 @@
+{{ define "header" }}
+{{- partial "header.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+    <div class="gwu-content">
+        {{ .Content }}
+        <article>
+            {{ range $.Site.Data.faq }}
+                <h2>{{ .question }}</h2>
+                {{ .answer | markdownify }}
+            {{ end }}
+        </article>
+    </div>        
+{{ end }}

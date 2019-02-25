@@ -1,5 +1,5 @@
 ---
-title: Recursos GWU España
+title: Recursos
 description: Una organización de caracter horizontal dedicada a reivindicar los derechos de los trabajadores en la industria de los videojuegos
 ---
 

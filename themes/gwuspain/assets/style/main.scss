@@ -1,11 +1,11 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em; 
-    font-weight: 300; 
+    font-size: 1.2em;
+    font-weight: 300;
     letter-spacing: 0.01em;
-    line-height:  1.6;
+    line-height: 1.6;
     color: white;
-    background-color: #212121;    
+    background-color: #212121;
     margin: 0;
 }
 
@@ -23,47 +23,49 @@ body {
     margin: auto;
     max-width: 700px;
     padding: 0 30px;
-    /* font-family: Gotham, sans-serif; */
-}
-
-.gwu-content h2 {
-    font-family: Gotham, sans-serif;
-}
-
-.gwu-content p {
     color: #ababab;
-}
 
-.gwu-content b {
-    color: white;
-}
-
-.gwu-content a {
-    color: white;
-    text-decoration: none;
-    border-bottom: 2px solid white;
-}
-
-.gwu-content ul {
-    margin-left: 1.5em;
-}
-@media (max-width: 350px) {
-    .gwu-content ul.fa-ul {
-        margin-left: .5em;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: Gotham, sans-serif;
+        color: white;
     }
-}
 
-.gwu-content ul.fa-ul li {
-    margin: .5em 0;
-}
+    b {
+        color: white;
+    }
 
-.gwu-content ul.fa-ul li a {
-    border: none;
-}
+    a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 2px solid white;
+    }
 
-.gwu-content ul.fa-ul li i:first-child {
-    margin-right: 10px;
-    color: white;
+    ul {
+        list-style-type: square;
+
+        li {
+            margin: .5em 0;
+        }
+
+        &.fa-ul {
+            margin-left: 1.5em;
+            list-style-type: none;
+            @media (max-width: 350px) {
+                margin-left: .5em;
+            }
+
+            li {
+                a {
+                    border: none;
+                }
+
+                i:first-child {
+                    margin-right: 10px;
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 /* Landing */
