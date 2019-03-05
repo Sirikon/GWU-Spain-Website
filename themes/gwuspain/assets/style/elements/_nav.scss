@@ -1,0 +1,122 @@
+$breakpoint: 530px;
+
+body.nav-is-open {
+    overflow: hidden;
+}
+
+.gwu-nav {
+    font-size: 1em;
+    width: 100%;
+    user-select: none;
+    -moz-user-select: none;
+
+    &-menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media (max-width: $breakpoint) {
+            display: flex;
+            position: fixed;
+            background-color: #141414;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            flex-direction: column;
+            padding: 30px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: 1;
+            transform: translate3d(-100%, 0, 0);
+            transition: transform .5s cubic-bezier(.41,.58,0,1);
+
+            body.nav-is-open & {
+                transform: translate3d(0%, 0, 0);
+            }
+        }
+
+        &-close {
+            display: none;
+            @media (max-width: $breakpoint) { display: flex; }
+
+            height: 70px;
+            width: 70px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 30px;
+
+            &-bar {
+                height: 6px;
+                width: 65%;
+                background-color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                &.is-1 {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &.is-2 {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &-toggle {
+        display: none;
+        @media (max-width: $breakpoint) { display: flex; }
+
+        height: 70px;
+        width: 70px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        div {
+            height: 6px;
+            width: 100%;
+            background-color: white;
+        }
+
+        body.nav-is-open & {
+            .gwu-nav-toggle-bar {
+                &.is-1 {
+                    transform: translate(0px, 17px) rotate(45deg);
+                }
+                &.is-2 {
+                    opacity: 0;
+                }
+                &.is-3 {
+                    transform: translate(0px, -17px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &-item {
+        text-decoration: none;
+        color: inherit;
+        padding: 1em 1.5em;
+        box-sizing: border-box;
+
+        &.is-active {
+            background-color: white;
+            color: #212121;
+            font-weight: bold;
+        }
+
+        @media (max-width: $breakpoint) {
+            width: 100%;
+        }
+    }
+}

@@ -21,9 +21,18 @@ body {
 .gwu-content {
     display: block;
     margin: auto;
-    max-width: 700px;
+    max-width: 1200px;
     padding: 0 30px;
     color: #ababab;
+
+    &.is-mid {
+        max-width: 700px;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 0;
+    }
 
     h1, h2, h3, h4, h5, h6 {
         font-family: Gotham, sans-serif;
@@ -68,110 +77,8 @@ body {
     }
 }
 
-/* Landing */
-
-.gwu-landing {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    padding: 20px;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.gwu-landing-content {
-    border: 10px solid white;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.gwu-landing-hand {
-    margin-bottom: -1px;
-}
-
-@media (max-width: 500px) {
-    .gwu-landing-hand {
-        width: 250px;
-    }
-}
-
-@media (max-width: 400px) {
-    .gwu-landing-hand {
-        width: 200px;
-    }
-}
-
-.gwu-landing-text {
-    flex-grow: 1;
-    font-family: Gotham;
-    font-size: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 0 20px;
-}
-
-.gwu-landing-text h1 {
-    font-size: 5em;
-    margin-bottom: .5em;
-    line-height: 1em;
-}
-
-@media (max-width: 830px) {
-    .gwu-landing-text h1 {
-        font-size: 3em;
-    }
-}
-
-.gwu-landing-text p {
-    color: #ababab;
-    max-width: 500px;
-    display: block;
-    margin: auto;
-}
-
-.gwu-landing-text b {
-    color: white;
-}
-
-.gwu-landing-buttons {
-    margin-top: 50px;
-}
-
-.gwu-landing-button {
-    display: inline-block;
-    padding: 1em 2em;
-    border: 3px solid white;
-    margin: 0 10px;
-    text-decoration: none;
-    color: white;
-}
-
-@media (max-width: 600px) {
-    .gwu-landing-buttons {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
-    }
-    .gwu-landing-button {
-        display: block;
-        margin: auto;
-        margin: 0 0 10px 0;
-    }
-}
-
-.gwu-landing-button.is-primary {
-    background-color: white;
-    color: #212121;
-}
+@import "./elements/landing";
+@import "./elements/nav";
 
 /* Footer */
 
@@ -183,7 +90,7 @@ body {
 
 .gwu-header {
     height: 100px;
-    max-width: 700px;
+    max-width: 1200px;
     margin: auto;
     margin-top: 1em;
     margin-bottom: 2em;
@@ -194,19 +101,27 @@ body {
     border-bottom: 10px solid white;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: stretch;
+    position: relative;
+
+    @media (max-width: 530px) {
+        .gwu-nav-toggle {
+            margin-left: -15px;
+        }
+    }
 }
 
 .gwu-header-title {
     flex-grow: 1;
-    height: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    white-space: nowrap;
+    margin-right: 30px;
 }
 
 .gwu-header-title h1 {
-    margin: .2em 0 0 0;
+    margin: 0 0 0 0;
     line-height: 1em;
     font-family: Gotham, sans-serif;
 }
@@ -217,12 +132,15 @@ body {
 }
 
 .gwu-header-hand {
-    height: 90px;
-    margin-bottom: -1px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
 }
 
-@media (max-width: 340px) {
-    .gwu-header-hand {
+@media (max-width: 850px) {
+    .gwu-header-title {
         display: none;
     }
 }

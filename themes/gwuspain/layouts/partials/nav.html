@@ -1,0 +1,22 @@
+<div class="gwu-nav">
+    <div class="gwu-nav-toggle" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="gwu-nav-menu">
+        <div class="gwu-nav-menu-close" onclick="toggleNav()">
+            <div class="gwu-nav-menu-close-bar is-1"></div>
+            <div class="gwu-nav-menu-close-bar is-2"></div>
+        </div>
+        <a href="/" class="gwu-nav-item {{ if eq "/" .URL }}is-active{{ end }}">Inicio</a>
+        <a href="{{ $.Site.Params.inscriptionUrl }}" class="gwu-nav-item">Inscríbete</a>
+        <a href="/faqs/" class="gwu-nav-item {{ if eq "/faqs/" .URL }}is-active{{ end }}">FAQs</a>
+    </div>
+</div>
+
+<script>
+    function toggleNav() {
+        document.body.classList.toggle('nav-is-open');
+    }
+</script>

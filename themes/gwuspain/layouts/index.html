@@ -1,6 +1,7 @@
 {{ define "main" }}
     <div class="gwu-landing">
         <div class="gwu-landing-content">
+            {{- partial "nav.html" . -}}
             <div class="gwu-landing-text">
                 <div>
                     <h1>{{ $.Site.Title }}</h1>
@@ -17,7 +18,7 @@
         </div>
     </div>
 
-    <div class="gwu-content">
+    <div class="gwu-content is-mid">
         <h2 id="about">Sobre GWU España</h2>
         <p>
             Todavía no somos un sindicato, pero estamos trabajando duro para <b>formar uno</b>.

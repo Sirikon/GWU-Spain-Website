@@ -6,7 +6,7 @@
     <div class="gwu-content">
         {{ .Content }}
         <article>
-            {{ range $.Site.Data.faq }}
+            {{ range $.Site.Data.faqs }}
                 <h2>{{ .question }}</h2>
                 {{ .answer | markdownify }}
             {{ end }}
